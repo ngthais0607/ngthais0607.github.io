@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — Portfolio</title>
+  <meta name="description" content="Full-featured contact/booking form with validation.">
+  <link rel="icon" href="/logo-vector-IU-01.png" type="image/png">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Contact — Portfolio">
+  <meta property="og:description" content="Full-featured contact/booking form with validation.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://example.com">
+  <meta property="og:image" content="/assets/img/placeholder-1.png">
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/css/styles.css">
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+<div class="page">
+<header class="site-header" role="banner">
+  <a class="brand" href="/index.html" aria-label="Home">
+    <span class="brand-logo" aria-hidden="true">◆</span>
+    <span class="brand-text">ThaiNguyen</span>
+  </a>
+  <input id="nav-toggle" type="checkbox" aria-label="Open/close menu">
+  <label class="hamburger" for="nav-toggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </label>
+  <nav class="site-nav" role="navigation" aria-label="Primary">
+    <a href="/index.html">Home</a>
+    <a href="/about.html">About</a>
+    <a href="/projects.html">Projects</a>
+    <a href="/gallery.html">Gallery</a>
+    <a href="/blog.html">Blog</a>
+    <a href="/contact.html">Contact</a>
+    <a href="/map.html">Map</a>
+    <a href="/policy.html">Policy</a>
+    <button id="themeToggle" class="theme-toggle" aria-pressed="false" aria-label="Toggle theme"><i data-lucide="sun"></i></button>
+  </nav>
+</header>
+<main class="site-main" role="main">
+<section class="prose container">
+  <h1>Contact</h1>
+  <form class="form form--grid" action="#" method="post" novalidate>
+    <fieldset>
+      <legend>Personal information</legend>
+      <div class="grid-2">
+        <div class="field">
+          <label for="fullname">Full name <span class="req" aria-hidden="true">*</span></label>
+          <input id="fullname" name="fullname" type="text" required minlength="2" placeholder="John Doe" aria-describedby="name-hint">
+          <small id="name-hint" class="hint">At least 2 characters.</small>
+        </div>
+        <div class="field">
+          <label for="email">Email <span class="req" aria-hidden="true">*</span></label>
+          <input id="email" name="email" type="email" required placeholder="you@example.com" aria-describedby="email-hint">
+          <small id="email-hint" class="hint">Use a valid email format (e.g., name@domain.com).</small>
+        </div>
+        <div class="field">
+          <label for="tel">Phone number</label>
+          <input id="tel" name="tel" type="tel" pattern="^\+?[0-9\-\s]{8,15}$" placeholder="+84 912 345 678" aria-describedby="tel-hint">
+          <small id="tel-hint" class="hint">Digits, spaces, dashes allowed. Example: +84 912 345 678.</small>
+        </div>
+        <div class="field">
+          <label for="password">Password <span class="req" aria-hidden="true">*</span></label>
+          <input id="password" name="password" type="password" required minlength="6" aria-describedby="pwd-hint">
+          <small id="pwd-hint" class="hint">At least 6 characters.</small>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Details</legend>
+      <div class="grid-2">
+        <div class="field">
+          <label for="age">Age</label>
+          <input id="age" name="age" type="number" min="0" max="120" step="1">
+        </div>
+        <div class="field">
+          <label for="date">Appointment date <span class="req" aria-hidden="true">*</span></label>
+          <input id="date" name="date" type="date" required>
+        </div>
+        <div class="field">
+          <label for="select">Topic <span class="req" aria-hidden="true">*</span></label>
+          <select id="select" name="select" required>
+            <optgroup label="Study">
+              <option value="html">HTML</option>
+              <option value="css">CSS</option>
+            </optgroup>
+            <optgroup label="Algorithms">
+              <option value="sorting">Sorting</option>
+              <option value="linkedlist">LinkedList</option>
+            </optgroup>
+          </select>
+        </div>
+        <div class="field">
+          <label for="topic">Suggestions (datalist)</label>
+          <input list="suggestions" id="topic" name="topic" placeholder="Type to see suggestions">
+          <datalist id="suggestions">
+            <option value="Semantic HTML"></option>
+            <option value="Open Graph"></option>
+            <option value="Big-O basics"></option>
+          </datalist>
+        </div>
+      </div>
+      <div class="field">
+        <label for="message">Message <span class="req" aria-hidden="true">*</span></label>
+        <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project..."></textarea>
+      </div>
+    </fieldset>
+
+    <details class="advanced">
+      <summary>Advanced options (optional)</summary>
+      <div class="grid-2">
+        <div class="field">
+          <label for="range">Interest level</label>
+          <input id="range" name="range" type="range" min="0" max="10" value="5">
+          <output id="result" name="result" for="range">Score: 5</output>
+        </div>
+        <div class="field">
+          <label for="color">Favorite color</label>
+          <input id="color" name="color" type="color" value="#3355ff">
+        </div>
+        <div class="field">
+          <label for="file">Attachment</label>
+          <input id="file" name="file" type="file" accept=".png,.jpg,.pdf">
+        </div>
+        <div class="field">
+          <span class="label">Gender</span>
+          <div class="options-grid">
+            <label class="option"><input type="radio" name="gender" value="male"> <span>Male</span></label>
+            <label class="option"><input type="radio" name="gender" value="female"> <span>Female</span></label>
+            <label class="option"><input type="radio" name="gender" value="other"> <span>Other</span></label>
+          </div>
+        </div>
+        <div class="field">
+          <span class="label">Interests</span>
+          <div class="options-grid">
+            <label class="option"><input type="checkbox" name="topics" value="frontend"> <span>Frontend</span></label>
+            <label class="option"><input type="checkbox" name="topics" value="dsa"> <span>DSA</span></label>
+            <label class="option"><input type="checkbox" name="topics" value="ai"> <span>AI</span></label>
+          </div>
+        </div>
+        <div class="field">
+          <label for="meter">Demo meter</label>
+          <meter id="meter" min="0" low="30" high="70" max="100" value="50">50</meter>
+        </div>
+        <div class="field">
+          <label for="progress">Demo progress</label>
+          <progress id="progress" max="100" value="0">0%</progress>
+        </div>
+      </div>
+      <input type="hidden" name="hidden_token" value="abc123">
+    </details>
+
+    <div class="actions">
+      <button type="submit" class="btn primary">Submit</button>
+      <button type="reset" class="btn">Reset</button>
+    </div>
+  </form>
+</section>
+
+</main>
+<footer class="site-footer" role="contentinfo">
+  <p>&copy; <span id="year"></span> ThaiNguyen. <a href="/policy.html">Policies</a></p>
+</footer>
+</div>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>

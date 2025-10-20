@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Home — Portfolio</title>
-  <meta name="description" content="Portfolio homepage with hero, highlights, and responsive cards.">
+  <title>Projects — Portfolio</title>
+  <meta name="description" content="Projects page with grid cards and figures.">
   <link rel="icon" href="/logo-vector-IU-01.png" type="image/png">
   <!-- Open Graph -->
-  <meta property="og:title" content="Home — Portfolio">
-  <meta property="og:description" content="Portfolio homepage with hero, highlights, and responsive cards.">
+  <meta property="og:title" content="Projects — Portfolio">
+  <meta property="og:description" content="Projects page with grid cards and figures.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://example.com">
   <meta property="og:image" content="/assets/img/placeholder-1.png">
@@ -42,37 +42,34 @@
 </header>
 <main class="site-main" role="main">
 
-<section class="hero container">
-  <div class="hero-content">
-    <h1>Hi, I'm <span class="accent">ThaiNguyen</span></h1>
-    <p>Web Developer • IT Student • UI/UX Enthusiast</p>
-    <div class="hero-actions">
-      <a class="btn primary" href="/projects.html">View Projects</a>
-      <a class="btn" href="/contact.html">Contact</a>
-    </div>
+<section class="prose container">
+  <h1>Projects</h1>
+  <div class="grid projects-grid">
+    <article class="card media">
+      <figure>
+        <img src="/assets/img/placeholder-1.png" alt="Project A image">
+        <figcaption>Project A — Landing Page</figcaption>
+      </figure>
+      <p>Minimal landing page using Grid/Flex, optimized images, dark mode.</p>
+      <a class="btn" href="#" aria-disabled="true">Demo</a>
+    </article>
+    <article class="card media">
+      <figure>
+        <img src="/assets/img/placeholder-2.png" alt="Project B image">
+        <figcaption>Project B — Algorithms Visualizer</figcaption>
+      </figure>
+      <p>Visualizing Selection Sort, LinkedList operations, and Big‑O.</p>
+      <a class="btn" href="#" aria-disabled="true">Demo</a>
+    </article>
+    <article class="card media">
+      <figure>
+        <img src="/assets/img/placeholder-3.png" alt="Project C image">
+        <figcaption>Project C — Coffee Shop</figcaption>
+      </figure>
+      <p>Menu, pricing, booking (full form), embedded map.</p>
+      <a class="btn" href="#" aria-disabled="true">Demo</a>
+    </article>
   </div>
-  <figure class="hero-figure">
-    <img src="/assets/img/placeholder-1.png" alt="Avatar or featured project image">
-    <figcaption>Project illustration</figcaption>
-  </figure>
-</section>
-
-<section class="cards container">
-  <article class="card">
-    <h2>About me</h2>
-    <p>IT student focused on Frontend, DSA, and Computer Architecture.</p>
-    <a class="inline" href="/about.html">Read more →</a>
-  </article>
-  <article class="card">
-    <h2>Projects</h2>
-    <p>Selected works: Portfolio, Coffee Landing, Algorithms Visualizer.</p>
-    <a class="inline" href="/projects.html">View projects →</a>
-  </article>
-  <article class="card">
-    <h2>Blog</h2>
-    <p>Study notes: Semantic HTML, Big‑O, LinkedList, CPU CPI, …</p>
-    <a class="inline" href="/blog.html">Read blog →</a>
-  </article>
 </section>
 
 </main>
