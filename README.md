@@ -30,7 +30,7 @@ A 7–10 page personal website built with semantic HTML5 and modern CSS (fluid t
 Open `index.html` locally or deploy the folder on GitHub Pages/Netlify.
 
 ###  Deployment
-- Ready for hosting on **ngthais0607.github.io** .  
+- Ready for hosting on [ngthais0607.github.io](https://ngthais0607.github.io)
 - Includes `README.md`, `AI_USAGE_LOG.md`, `wireframe.md`, and `testing-report.md`.
 
 ##  AI Usage Declaration
